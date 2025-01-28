@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter basename="/mumin/">
       <Routes>
         <Route path="/" element={<Splash />} />
-        <Route path="/html" element={<CreateContent />} />
+        <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>
           <Route index element={<Index />} />
           <Route path="salah" element={<Salah />} />

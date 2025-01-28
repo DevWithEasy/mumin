@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './editor.css';
@@ -26,14 +26,16 @@ export function Editor({ value, setValue }) {
     'indent',
     'link',
   ];
-  console.log(value);
+
   return (
-    <ReactQuill
-      theme="snow"
-      modules={modules}
-      formats={formats}
-      value={value} // Controlled value
-      onChange={setValue} // Update value on change
-    />
+    <div className="editor-container">
+      <ReactQuill
+        theme="snow"
+        modules={modules}
+        formats={formats}
+        value={value}
+        onChange={setValue}
+      />
+    </div>
   );
 }

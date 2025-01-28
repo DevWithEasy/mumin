@@ -16,6 +16,23 @@
 .preview h3{
   font-size: 18.72px;
 }
+.editor-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-toolbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.ql-container {
+  flex: 1;
+  overflow-y: auto;
+}
 
 @layer base {
   :root {

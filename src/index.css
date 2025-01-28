@@ -7,6 +7,15 @@
 .bg{
     background: radial-gradient(circle at 50% 70%, #ffffff, #f9fdff, #f3fbff, #edf8ff, #e7f6ff, #e1f4ff, #dbf2ff, #d5f0ff, #cfeeff, #c9ebff, #c2e9ff, #bce7ff);
 }
+.preview h1{
+  font-size: 32px;
+}
+.preview h2{
+  font-size: 24px;
+}
+.preview h3{
+  font-size: 18.72px;
+}
 
 @layer base {
   :root {

@@ -5,12 +5,17 @@ import Salah from "./pages/Salah"
 import AppLayout from "./components/layout/AppLayout"
 import AdminLayout from "./components/layout/AdminLayout"
 import CreateContent from "./pages/admin/CreateContent"
+import Topics from "./pages/salah/Topics"
+import TopicUpdate from "./pages/salah/Update"
 
 function App() {
 
   return (
     <BrowserRouter basename="/mumin/">
       <Routes>
+        <Route path="/" element={<Splash />} />
+        <Route path="/topics" element={<Topics />} />
+        <Route path="/topics/:id" element={<TopicUpdate />} />
         <Route path="/" element={<Splash />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>

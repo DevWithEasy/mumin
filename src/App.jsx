@@ -7,6 +7,7 @@ import AdminLayout from "./components/layout/AdminLayout"
 import CreateContent from "./pages/admin/CreateContent"
 import Topics from "./pages/salah/Topics"
 import TopicUpdate from "./pages/salah/Update"
+import JsonView from "./pages/JsonView"
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Splash />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/topics/:id" element={<TopicUpdate />} />
-        <Route path="/" element={<Splash />} />
+        <Route path="/json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>
           <Route index element={<Index />} />

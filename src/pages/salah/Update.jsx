@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Editor } from "../../components/editor/Editor";
 import { use } from "react";
 import { useParams } from "react-router";
+import TinyEditor from "../../components/editor/TinyEditor";
 
 export default function TopicUpdate() {
   const [description, setDescription] = useState("");
@@ -9,6 +10,8 @@ export default function TopicUpdate() {
   const [isCopied, setIsCopied] = useState(false);
   const [isDescription, setIsDescription] = useState(true);
   const params = useParams();
+  const desRef = useRef()
+  const refRef = useRef()
 
   const updateTopics = () => {
     fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`, {
@@ -92,9 +95,11 @@ export default function TopicUpdate() {
       <div className="h-[calc(100%-64px)] p-4 flex justify-between space-x-2">
         <div className="w-1/2 overflow-y-auto">
           {isDescription ? (
-            <Editor value={description} setValue={setDescription} />
+            // <Editor value={description} setValue={setDescription} />
+            <TinyEditor editorRef={desRef} value={description} setValue={setDescription}/>
           ) : (
-            <Editor value={reference} setValue={setReference} />
+            // <Editor value={reference} setValue={setReference} />
+            <TinyEditor editorRef={refRef} value={reference} setValue={setReference}/>
           )}
         </div>
         <div className="w-1/2 overflow-y-auto">

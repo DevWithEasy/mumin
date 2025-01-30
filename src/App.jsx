@@ -8,6 +8,8 @@ import CreateContent from "./pages/admin/CreateContent"
 import Topics from "./pages/salah/Topics"
 import TopicUpdate from "./pages/salah/Update"
 import JsonView from "./pages/JsonView"
+import AppTopics from "./pages/salah/app/Topics"
+import AppTopicUpdate from "./pages/salah/app/Update"
 
 function App() {
 
@@ -15,9 +17,11 @@ function App() {
     <BrowserRouter basename="/mumin/">
       <Routes>
         <Route path="/" element={<Splash />} />
-        <Route path="/topics" element={<Topics />} />
-        <Route path="/topics/:id" element={<TopicUpdate />} />
-        <Route path="/json" element={<JsonView />} />
+        <Route path="topics" element={<Topics />} />
+        <Route path="topics/:id" element={<TopicUpdate />} />
+        <Route path="topics/app" element={<AppTopics />} />
+        <Route path="topics/app/:id" element={<AppTopicUpdate />} />
+        <Route path="json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>
           <Route index element={<Index />} />

@@ -4,7 +4,7 @@ import { use } from "react";
 import { useParams } from "react-router";
 import TinyEditor from "../../components/editor/TinyEditor";
 
-export default function TopicUpdate() {
+export default function SalaturUpdate() {
   const [description, setDescription] = useState("");
   const [reference, setReference] = useState("");
   const [isCopied, setIsCopied] = useState(false);
@@ -14,7 +14,7 @@ export default function TopicUpdate() {
   const refRef = useRef()
 
   const updateTopics = () => {
-    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`, {
+    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function TopicUpdate() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`)
+    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setDescription(data.description);

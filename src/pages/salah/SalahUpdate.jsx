@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Editor } from "../../../components/editor/Editor";
-import { use } from "react";
 import { useParams } from "react-router";
-import TinyEditor from "../../../components/editor/TinyEditor";
+import TinyEditor from "../../components/editor/TinyEditor";
 
-export default function AppTopicUpdate() {
+export default function SalahUpdate() {
   const [description, setDescription] = useState("");
   const [reference, setReference] = useState("");
   const [isCopied, setIsCopied] = useState(false);
@@ -14,7 +12,7 @@ export default function AppTopicUpdate() {
   const refRef = useRef()
 
   const updateTopics = () => {
-    fetch(`http://localhost:8080/api/generate/salah_app/topics/${params.id}`, {
+    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +52,7 @@ export default function AppTopicUpdate() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/generate/salah_app/topics/${params.id}`)
+    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setDescription(data.description);

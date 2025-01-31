@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import Splash from "./pages/Splash"
-import Index from "./pages/Index"
-import Salah from "./pages/Salah"
-import AppLayout from "./components/layout/AppLayout"
 import AdminLayout from "./components/layout/AdminLayout"
+import AppLayout from "./components/layout/AppLayout"
 import CreateContent from "./pages/admin/CreateContent"
-import Topics from "./pages/salah/Topics"
-import TopicUpdate from "./pages/salah/Update"
+import Index from "./pages/Index"
 import JsonView from "./pages/JsonView"
-import AppTopics from "./pages/salah/app/Topics"
-import AppTopicUpdate from "./pages/salah/app/Update"
+import Salah from "./pages/Salah"
+import Splash from "./pages/Splash"
+import SalaturTopics from "./pages/salah/SalaturTopics"
+import SalaturUpdate from "./pages/salah/SalaturUpdate"
+import SalahTopics from "./pages/salah/SalahTopics"
+import SalahUpdate from "./pages/salah/SalahUpdate"
 
 function App() {
 
@@ -17,10 +17,10 @@ function App() {
     <BrowserRouter basename="/mumin/">
       <Routes>
         <Route path="/" element={<Splash />} />
-        <Route path="topics" element={<Topics />} />
-        <Route path="topics/:id" element={<TopicUpdate />} />
-        <Route path="topics/app" element={<AppTopics />} />
-        <Route path="topics/app/:id" element={<AppTopicUpdate />} />
+        <Route path="salatur/topics" element={<SalaturTopics />} />
+        <Route path="salatur/topics/:id" element={<SalaturUpdate />} />
+        <Route path="salah/topics" element={<SalahTopics />} />
+        <Route path="salah/topics/:id" element={<SalahUpdate />} />
         <Route path="json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>

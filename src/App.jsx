@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="salatur/topics" element={<SalaturTopics />} />
-        <Route path="salatur/topics/:id" element={<SalaturUpdate />} />
+        <Route path="salatur/topics/:cat_id/:id" element={<SalaturUpdate />} />
         <Route path="salah/topics" element={<SalahTopics />} />
         <Route path="salah/topics/:id" element={<SalahUpdate />} />
         <Route path="json" element={<JsonView />} />

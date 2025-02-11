@@ -54,14 +54,15 @@ export default function SalaturUpdate() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.id}`)
+    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.cat_id}/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         setDescription(data.description);
         setReference(data.reference);
       });
   }, []);
-
+console.log(params)
   return (
     <div className="h-screen">
       <div className="h-16 p-4 bg-gray-50 flex justify-between items-center">

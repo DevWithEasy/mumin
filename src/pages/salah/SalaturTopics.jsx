@@ -30,7 +30,7 @@ export default function Salaturcategories() {
                   return (
                     <div
                       onClick={()=>navigate(`/salatur/topics/${topic.cat_id}/${topic.topic_id}`)}
-                      className='p-2 border rounded'
+                      className='p-2 border rounded cursor-pointer'
                     >
                       {topic.title}
                     </div>

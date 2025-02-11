@@ -9,7 +9,7 @@ export default function Salaturcategories() {
     .then(response => response.json())
     .then(data => setCategories(data))
   },[])
-  console.log(categories)
+  
   return (
     <div>
       {
@@ -28,12 +28,12 @@ export default function Salaturcategories() {
               {
                 category?.topics.map(topic =>{
                   return (
-                    <div
-                      onClick={()=>navigate(`/salatur/topics/${topic.cat_id}/${topic.topic_id}`)}
-                      className='p-2 border rounded cursor-pointer'
+                    <Link
+                      to={`/salatur/topics/${topic.cat_id}/${topic.topic_id}`}
+                      className='block p-2 border rounded cursor-pointer'
                     >
                       {topic.title}
-                    </div>
+                    </Link>
                   )
                 })
               }

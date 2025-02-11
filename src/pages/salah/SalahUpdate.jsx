@@ -12,7 +12,7 @@ export default function SalahUpdate() {
   const refRef = useRef()
 
   const updateTopics = () => {
-    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`, {
+    fetch(`http://localhost:8080/api/generate/salah/topics/${params.cat_id}/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function SalahUpdate() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/generate/salah/topics/${params.id}`)
+    fetch(`http://localhost:8080/api/generate/salah/topics/${params.cat_id}/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setDescription(data.description);

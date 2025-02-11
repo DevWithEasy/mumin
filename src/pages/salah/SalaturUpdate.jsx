@@ -14,7 +14,7 @@ export default function SalaturUpdate() {
   const refRef = useRef()
 
   const updateTopics = () => {
-    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.id}`, {
+    fetch(`http://localhost:8080/api/generate/salatur/topics/${params.cat_id}/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

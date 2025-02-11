@@ -20,7 +20,7 @@ function App() {
         <Route path="salatur/topics" element={<SalaturTopics />} />
         <Route path="salatur/topics/:cat_id/:id" element={<SalaturUpdate />} />
         <Route path="salah/topics" element={<SalahTopics />} />
-        <Route path="salah/topics/:id" element={<SalahUpdate />} />
+        <Route path="salah/topics/:cat_id/:id" element={<SalahUpdate />} />
         <Route path="json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>

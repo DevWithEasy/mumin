@@ -10,6 +10,8 @@ import SalaturTopics from "./pages/salah/SalaturTopics"
 import SalaturUpdate from "./pages/salah/SalaturUpdate"
 import SalahTopics from "./pages/salah/SalahTopics"
 import SalahUpdate from "./pages/salah/SalahUpdate"
+import JakahTopics from "./pages/salah/JakahTopics"
+import JakahUpdate from "./pages/salah/JakahUpdate"
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="salatur/topics/:cat_id/:id" element={<SalaturUpdate />} />
         <Route path="salah/topics" element={<SalahTopics />} />
         <Route path="salah/topics/:cat_id/:id" element={<SalahUpdate />} />
+        <Route path="jakah/topics" element={<JakahTopics />} />
+        <Route path="jakah/topics/:cat_id/:id" element={<JakahUpdate />} />
         <Route path="json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>

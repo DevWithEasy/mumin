@@ -12,6 +12,8 @@ import SalahTopics from "./pages/salah/SalahTopics"
 import SalahUpdate from "./pages/salah/SalahUpdate"
 import JakahTopics from "./pages/salah/JakahTopics"
 import JakahUpdate from "./pages/salah/JakahUpdate"
+import SawmTopics from "./pages/salah/SawmTopics"
+import SawmUpdate from "./pages/salah/SawmUpdate"
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
         <Route path="salah/topics/:cat_id/:id" element={<SalahUpdate />} />
         <Route path="jakah/topics" element={<JakahTopics />} />
         <Route path="jakah/topics/:cat_id/:id" element={<JakahUpdate />} />
+        <Route path="sawm/topics" element={<SawmTopics />} />
+        <Route path="sawm/topics/:id" element={<SawmUpdate />} />
         <Route path="json" element={<JsonView />} />
         <Route path="html" element={<CreateContent />} />
         <Route path="app" element={<AppLayout />}>

@@ -18,7 +18,7 @@ export default function SawmTopics() {
                       to={`/sawm/topics/${category.id}`}
                       className='block p-2 border rounded cursor-pointer'
                     >
-                      {category.title}
+                      {index}. {category.title}
                     </Link>
         ))
       }
